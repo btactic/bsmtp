@@ -1,0 +1,310 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[catalan]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=10,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{
+ linkcolor=blue, urlcolor=blue}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+\makeatother
+
+\begin{document}
+
+\author{bTactic - open source \& cloud solutions\\
+\href{http://www.btactic.com}{http://www.btactic.com}}
+
+
+\title{bSmtp zimlet - Manual d'usuari}
+
+\maketitle
+\tableofcontents{}
+
+
+\section{Introducció}
+
+
+\subsection{Què és bSmtp?}
+
+Es un Zimlet per a Zimbra que facilita l'enviament de correus mitjançant
+SMTP. Això permet utilitzar comptes externs, com pot ser un compte
+a Gmail, des del propi Zimbra i tenir així centralitzats els nostres
+comptes de correu electrònic.
+
+
+\subsection{Perquè utilitzar bSmtp?}
+
+La raó principal és poder enviar correus des d'un tercer i que el
+correu surti des de la ip d'aquest tercer. De forma nativa es pot
+arribar a configurar Zimbra per a que envii en nom d'una altra compta
+però, això, a la pràctica pot fer que els emails enviats així acabin
+a spam per no estar la ip del nostre servidor de Zimbra autoritzada
+a realitzar aquests enviaments en nom del domini. Amb aquest zimlet
+el email surt del tercer.
+
+
+\subsection{Com puc utilitzar bSmtp?}
+
+Per a poder utilitzar aquest zimlet el seu administrador de Zimbra
+l'ha d'haver instal·lat i configurat prèviament. El seu administrador
+pot trobar tota la informació necessària per a instal·lar i configurar
+el zimlet al manual de l'administrador disponible a \href{https://github.com/btactic/bsmtp}{https://github.com/btactic/bsmtp}.
+
+
+\section{\label{sec:1 Configuraci=0000F3 inicial del Zimlet}Configuració
+inicial del\emph{ }zimlet}
+
+Per a poder enviar\emph{ }correus electrònics utilitzant el\emph{
+}zimlet l'hem d'haver configurat prèviament. Aquest procediment només
+s'ha de seguir una vegada. No cal repetir-lo cada cop que vulguem
+enviar un correu.
+\begin{enumerate}
+\item \label{enu:Pas 1}Clicar sobre el\emph{ }zimlet\textbf{\emph{ bSmtp}}
+per a poder editar la seva configuració (veure figura \ref{fig:Pas 1}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step1-1}
+\par\end{centering}
+
+\caption{\label{fig:Pas 1}Pas \ref{enu:Pas 1} - Panell lateral de Zimbra
+\textrightarrow{} Zimlets \textrightarrow{} \textbf{\emph{bSmtp}}}
+\end{figure}
+
+
+\item \label{enu:Pas 2}Un cop oberta la finestra de configuració del\emph{
+}zimlet, clicar\textbf{\emph{ Seleccionar la carpeta}} (veure figura
+\ref{fig:Pas 2}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step1-2}
+\par\end{centering}
+
+\caption{\label{fig:Pas 2}Pas \ref{enu:Pas 2} - Configuració bSmtp \textrightarrow{}
+\textbf{\emph{Seleccionar la carpeta}}}
+\end{figure}
+
+
+\item \label{enu:Pas 3}Clicar sobre\textbf{\emph{ Nou}} (veure figura \ref{fig:Pas 3}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step1-3}
+\par\end{centering}
+
+\caption{\label{fig:Pas 3}Pas \ref{enu:Pas 3} - Selecció de la carpeta bSmtp
+\textrightarrow{} \textbf{\emph{Nou}}}
+\end{figure}
+
+
+\item \label{enu:Pas 4}Especificar a quina carpeta volem que es desin els
+correus que enviem mitjançant el\emph{ }zimlet. És aconsellable escollir
+un nom de carpeta de l'estil\emph{ Enviats Gmail} o similar. Com es
+pot observar en la figura \ref{fig:Pas 4} cal especificar el nom
+de la carpeta al camp\textbf{\emph{ Nom}} i seguidament clicar a\textbf{\emph{
+Acceptar}}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.44]{screenshots_user_ca/Step1-4}
+\par\end{centering}
+
+\caption{\label{fig:Pas 4}Pas \ref{enu:Pas 4} - Creació carpeta bSmtp}
+\end{figure}
+
+
+\item \label{enu:Pas 5}Seleccionar la carpeta que acabem de crear i clicar\textbf{\emph{
+Acceptar}}(veure figura \ref{fig:Pas 5}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.44]{screenshots_user_ca/Step1-5}
+\par\end{centering}
+
+\caption{\label{fig:Pas 5}Pas \ref{enu:Pas 5} - Selecció de la carpeta bSmtp
+\textrightarrow{} \textbf{\emph{Acceptar}}}
+\end{figure}
+
+
+\item \label{enu:Pas 6}Especificar les dades del compte de correu electrònic
+que volem utilitzar per a enviar correus i finalment clicar\textbf{\emph{
+Acceptar}} (veure figura \ref{fig:Pas 6}). Cal especificar tots els
+camps menys\emph{ Directori}, ja que aquest camp ja l'hem configurat
+seguint els passos 2, 3, 4 i 5. Si es vol configurar una compta de
+Gmail veure l'apartat \ref{sub:Configurar una Compta de Gmail}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step1-6}
+\par\end{centering}
+
+\caption{\label{fig:Pas 6}Pas \ref{enu:Pas 6} - Configuració del compte de
+correu a utilitzar}
+\end{figure}
+
+
+\end{enumerate}
+Ja tenim configurat el compte de correu electrònic correctament i
+ja podem enviar correus electrònics des d'aquesta compta.
+
+
+\subsection{Consideracions}
+
+Si es volgués modificar el compte de correu a utilitzar hauríem de
+repetir el procés seguint els passos \ref{enu:Pas 1} i \ref{enu:Pas 6},
+en el cas que volguéssim que els correus enviats es segueixin desant
+a la mateixa carpeta. Si es volen guardar en una carpeta diferent
+s'han de seguir tots els passos de nou.\\
+\\
+Si es modifica la contrasenya de la compta de correu electrònic extern
+s'han de seguir els passos \ref{enu:Pas 1} i \ref{enu:Pas 6}, i
+modificar el camp\emph{ Contrasenya}, ja que sinó el\emph{ }zimlet
+no serà capaç d'enviar els correus.
+
+
+\subsection{\label{sub:Configurar una Compta de Gmail}Configurar una compta
+de Gmail}
+
+Si es vol utilitzar una compta de Gmail hem de configurar el compte
+de Gmail per a permetre que el\emph{ }zimlet pugui enviar correus
+electrònics. Veiem el procés a seguir.\\
+\\
+Primer hem d'accedir a la compta de Gmail que volem utilitzar. Un
+cop estem identificats hem de realitzar els següents passos:
+\begin{enumerate}
+\item \label{enu2:Pas 1}Accedir a\textbf{\emph{ Mi cuenta}} (veure figura
+\ref{fig:Configurar Gmail - Pas 1}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step2-1}
+\par\end{centering}
+
+\caption{\label{fig:Configurar Gmail - Pas 1}Pas \ref{enu2:Pas 1} - Accedir
+a la configuració de la compta de Gmail}
+\end{figure}
+
+
+\item \label{enu2:Pas 2}Accedir a\textbf{\emph{ Aplicaciones y sitios conectados}}
+(veure figura \ref{fig:Configurar Gmail - Pas 2}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step2-2}
+\par\end{centering}
+
+\caption{\label{fig:Configurar Gmail - Pas 2}Pas \ref{enu2:Pas 2} - Accedir
+a la configuració d'aplicacions i llocs connectats}
+\end{figure}
+
+
+\item \label{enu2:Pas 3}Activar l'opció\textbf{\emph{ Permitir el acceso
+de aplicaciones menos seguras}} (veure figura \ref{fig:Configurar Gmail - Pas 3}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step2-3}
+\par\end{centering}
+
+\caption{\label{fig:Configurar Gmail - Pas 3}Pas \ref{enu2:Pas 3} - Permetre
+l'accés d'aplicacions externes a Gmail}
+\end{figure}
+
+
+\end{enumerate}
+Un cop hem editat els permisos de Gmail ja podem configurar el\emph{
+}zimlet seguint els passos de l'apartat \ref{sec:1 Configuraci=0000F3 inicial del Zimlet}.
+Al pas \ref{enu:Pas 6} hem d'utilitzar aquestes dades:
+\begin{itemize}
+\item Host Smtp: smtp.gmail.com
+\item Port Smtp: 465
+\item Compte Usuari: <la nostra direcció de Gmail>
+\item Contrasenya: <la contrasenya del nostre compte de Gmail>
+\item Opcions de encriptacions: SSL
+\end{itemize}
+
+\section{Com utilitzar el\emph{ }zimlet}
+
+Per a enviar un correu electrònic des de la compta que hem configurat
+prèviament hem de seguir els següents passos:
+\begin{enumerate}
+\item \label{enu3:Pas 1}Redactar un nou correu electrònic seguint el procediment
+habitual i un cop tenim el correu a punt per a ser enviat en comptes
+de clicar\emph{ Envia} hem de clicar\textbf{\emph{ Enviar per SMTP}}
+(veure figura \ref{fig:Enviar correu electr=0000F2nic}). A partir
+d'ara tenim dues opcions a l'hora d'enviar un correu:
+
+\begin{itemize}
+\item Clicar\textbf{\emph{ Envia}}: el correu serà enviat des de la compta
+de\emph{ }Zimbra\emph{.}
+\item Clicar\textbf{\emph{ Enviar per SMTP}}: el correu serà enviat des
+de la compta externa que haguem configurat prèviament.
+\end{itemize}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step3-1}
+\par\end{centering}
+
+\caption{\label{fig:Enviar correu electr=0000F2nic}Pas \ref{enu3:Pas 1} -
+Enviar correu electrònic}
+\end{figure}
+
+
+\item \label{enu3:Pas 2}Al enviar un correu pot ser que ens surti el missatge
+de la figura \ref{fig:Confirmaci=0000F3 desar email}. En aquest cas
+hem de clicar\textbf{\emph{ Si}}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step3-2}
+\par\end{centering}
+
+\caption{\label{fig:Confirmaci=0000F3 desar email}Pas \ref{enu3:Pas 2} -
+Confirmació desar correu electrònic}
+\end{figure}
+
+
+\item \label{enu3:Pas 3}Finalment el correu electrònic serà desat a la
+carpeta que haguem especificat com es pot veure a la figura \ref{fig:Enviados}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_ca/Step3-3}
+\par\end{centering}
+
+\caption{\label{fig:Enviados}Pas \ref{enu3:Pas 3} - Carpeta correus enviats
+des del\emph{ }zimlet}
+\end{figure}
+\end{enumerate}
+
+\end{document}

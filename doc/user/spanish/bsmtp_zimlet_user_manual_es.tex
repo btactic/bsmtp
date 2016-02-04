@@ -1,0 +1,312 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[spanish]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+\usepackage{color}
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=10,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{
+ linkcolor=blue, urlcolor=blue}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+\makeatother
+
+\begin{document}
+
+\author{bTactic - open source \& cloud solutions\\
+\href{http://www.btactic.com}{http://www.btactic.com}}
+
+
+\title{bSmtp zimlet - Manual de usuario}
+
+\maketitle
+\tableofcontents{}
+
+
+\section{Introducción}
+
+
+\subsection{¿Qué es bSmtp?}
+
+Es un zimlet para Zimbra que facilita el envío de correos mediante
+SMTP. Esto permite utilizar cuentas externas, como puede ser una cuenta
+de Gmail, desde el propio Zimbra y tener así centralizadas nuestras
+cuentas de correo electrónico.
+
+
+\subsection{¿Porqué utilizar bSmtp?}
+
+La razón principal es poder enviar los correos desde un tercero y
+que el correo salga desde la ip de ese tercero. De forma nativa se
+puede llegar a configurar Zimbra para que envíe en nombre de otra
+cuenta pero, esto, en la práctica puede hacer que los emails así enviados
+acaben en spam por no estar la ip de nuestro servidor Zimbra autorizada
+a hacer tales envíos en nombre del dominio. Con este zimlet el email
+sale del tercero.
+
+
+\subsection{¿Cómo puedo utilizar bSmtp?}
+
+Para poder utilizar este zimlet su administrador de Zimbra debe haberlo
+instalado y configurado previamente. Su administrador puede encontrar
+toda la información necesaria para instalar y configurar el zimlet
+en el manual del administrador disponible en \href{https://github.com/btactic/bsmtp}{https://github.com/btactic/bsmtp}.
+
+
+\section{\label{sec:1 Configuraci=0000F3 inicial del Zimlet}Configuración
+inicial del\emph{ }zimlet}
+
+Para poder enviar correos mediante el zimlet debemos configurarlo
+previamente. Este procedimiento solo se tiene que seguir una vez.
+No hace falta repetirlo cada vez que queramos enviar un correo.
+\begin{enumerate}
+\item \label{enu:Pas 1}Clicar encima del\emph{ }zimlet\textbf{\emph{ bSmtp}}
+para poder editar su configuración (ver figura \ref{fig:Pas 1}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step1-1}
+\par\end{centering}
+
+\caption{\label{fig:Pas 1}Paso \ref{enu:Pas 1} - Panel lateral de Zimbra
+\textrightarrow{} Zimlets \textrightarrow{} \textbf{\emph{bSmtp}}}
+\end{figure}
+
+
+\item \label{enu:Pas 2}Una vez abierta la ventana de configuración del
+zimlet, clicar\textbf{\emph{ Seleccionar la carpeta}} (ver figura
+\ref{fig:Pas 2}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step1-2}
+\par\end{centering}
+
+\caption{\label{fig:Pas 2}Paso \ref{enu:Pas 2} - Configuración bSmtp \textrightarrow{}
+\textbf{\emph{Seleccionar la carpeta}}}
+\end{figure}
+
+
+\item \label{enu:Pas 3}Clicar\textbf{\emph{ Nuevo}} (ver figura \ref{fig:Pas 3}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step1-3}
+\par\end{centering}
+
+\caption{\label{fig:Pas 3}Paso \ref{enu:Pas 3} - Selección de la carpeta
+bSmtp \textrightarrow{} \textbf{\emph{Nuevo}}}
+\end{figure}
+
+
+\item \label{enu:Pas 4}Especificar en que carpeta queremos que se almacenen
+los correos que enviemos mediante el zimlet. Es aconsejable escoger
+un nombre de carpeta del estilo \emph{Enviados Gmail }o similar. Como
+se puede observar en la figura \ref{fig:Pas 4} hay que especificar
+el nombre de la carpeta en el campo \textbf{\emph{Nombre }}y a continuación
+clicar\textbf{\emph{ Aceptar}}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.44]{screenshots_user_es/Step1-4}
+\par\end{centering}
+
+\caption{\label{fig:Pas 4}Paso \ref{enu:Pas 4} - Creación carpeta bSmtp}
+\end{figure}
+
+
+\item \label{enu:Pas 5}Seleccionar la carpeta que acabamos de crear y clicar\textbf{\emph{
+Aceptar}}(ver figura \ref{fig:Pas 5}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.44]{screenshots_user_es/Step1-5}
+\par\end{centering}
+
+\caption{\label{fig:Pas 5}Paso \ref{enu:Pas 5} - Selección de la carpeta
+bSmtp \textrightarrow{} \textbf{\emph{Aceptar}}}
+\end{figure}
+
+
+\item \label{enu:Pas 6}Especificar los datos de la cuenta de correo electrónico
+que queremos utilizar para enviar correos y finalmente clicar\textbf{\emph{
+Aceptar}} (ver figura \ref{fig:Pas 6}). Es necesario especificar
+todos los campos menos \emph{Directorio}, ya que este campo ya lo
+hemos configurado siguiendo los pasos 2, 3, 4 y 5. Si se quiere configurar
+una cuenta de Gmail ver el apartado \ref{sub:Configurar una Compta de Gmail}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step1-6}
+\par\end{centering}
+
+\caption{\label{fig:Pas 6}Paso \ref{enu:Pas 6} - Configuración de la cuenta
+de correo a utilizar}
+\end{figure}
+
+
+\end{enumerate}
+Ya tenemos configurada la cuenta de correo electrónico y ya podemos
+enviar correos desde esta cuenta.
+
+
+\subsection{Consideraciones}
+
+Se si quiere modificar la cuenta de correo a utilizar se debe repetir
+el proceso siguiendo los pasos \ref{enu:Pas 1} y \ref{enu:Pas 6},
+en el caso que quisiéramos que los correos enviados se siguieran almacenando
+en la misma carpeta. Si se quieren almacenar en una carpeta diferente
+hay que seguir todos los pasos de nuevo.\\
+\\
+Si se modifica la contraseña de la cuenta de correo electrónico externo
+se han de seguir los pasos \ref{enu:Pas 1} y \ref{enu:Pas 6}, y
+modificar el campo\emph{ Contraseña}, ya que sino el zimlet no será
+capaz de realizar los envíos.
+
+
+\subsection{\label{sub:Configurar una Compta de Gmail}Configurar una cuenta
+de Gmail}
+
+Si se quiere utilizar una cuenta de Gmail tenemos que configurar la
+cuenta de Gmail para permitir que el zimlet pueda enviar correos electrónicos.
+Veamos el proceso a seguir.\\
+\\
+Primero que todo hay que acceder a la cuenta de Gmail que queremos
+utilizar. Una vez estamos identificados tenemos que seguir los siguientes
+pasos:
+\begin{enumerate}
+\item \label{enu2:Pas 1}Acceder a\textbf{\emph{ Mi cuenta}} (ver figura
+\ref{fig:Configurar Gmail - Pas 1}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step2-1}
+\par\end{centering}
+
+\caption{\label{fig:Configurar Gmail - Pas 1}Paso \ref{enu2:Pas 1} - Acceder
+a la configuración de la cuenta de Gmail}
+\end{figure}
+
+
+\item \label{enu2:Pas 2}Acceder a\textbf{\emph{ Aplicaciones y sitios conectados}}
+(ver figura \ref{fig:Configurar Gmail - Pas 2}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step2-2}
+\par\end{centering}
+
+\caption{\label{fig:Configurar Gmail - Pas 2}Paso \ref{enu2:Pas 2} - Acceder
+a la configuración de aplicaciones y sitios conectados}
+\end{figure}
+
+
+\item \label{enu2:Pas 3}Activar la opción\textbf{\emph{ Permitir el acceso
+de aplicaciones menos seguras}} (ver figura \ref{fig:Configurar Gmail - Pas 3}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step2-3}
+\par\end{centering}
+
+\caption{\label{fig:Configurar Gmail - Pas 3}Paso \ref{enu2:Pas 3} - Permitir
+el acceso de aplicaciones externas a Gmail}
+\end{figure}
+
+
+\end{enumerate}
+Una vez editados los permisos de Gmail ya podemos configurar el zimlet
+siguiendo los pasos del apartado \ref{sec:1 Configuraci=0000F3 inicial del Zimlet}.
+En el paso \ref{enu:Pas 6} tenemos que utilizar estos parámetros:
+\begin{itemize}
+\item Host Smtp: smtp.gmail.com
+\item Puerto Smtp: 465
+\item Cuenta Usuario: <nuestra dirección de Gmail>
+\item Contraseña: <la contraseña de nuestra cuenta de Gmail>
+\item Opciones de encriptación: SSL
+\end{itemize}
+
+\section{Cómo utilizar el\emph{ }zimlet}
+
+Para enviar un correo electrónico desde la cuenta que hemos configurado
+previamente hemos de seguir estos pasos:
+\begin{enumerate}
+\item \label{enu3:Pas 1}Redactar un correo electrónico siguiendo el procedimiento
+habitual y una vez lo tenemos a punto para ser enviado, en vez de
+clicar \emph{Enviar }hay que clicar\textbf{\emph{ Enviar por SMTP}}
+(ver figura \ref{fig:Enviar correu electr=0000F2nic}). A partir de
+ahora tenemos dos opciones a la hora de enviar un correo:
+
+\begin{itemize}
+\item Clicar\textbf{\emph{ Enviar}}: el correo será enviado desde la cuenta
+de Zimbra\emph{.}
+\item Clicar\textbf{\emph{ Enviar por SMTP}}: el correo será enviado desde
+la cuenta externa que hayamos configurado previamente.
+\end{itemize}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step3-1}
+\par\end{centering}
+
+\caption{\label{fig:Enviar correu electr=0000F2nic}Paso \ref{enu3:Pas 1}
+- Enviar correo electrónico}
+\end{figure}
+
+
+\item \label{enu3:Pas 2}Al enviar un correo puede ser que nos salte el
+mensaje de la figura \ref{fig:Confirmaci=0000F3 desar email}. En
+este caso hay que clicar en \textbf{\emph{Si}}.
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step3-2}
+\par\end{centering}
+
+\caption{\label{fig:Confirmaci=0000F3 desar email}Paso \ref{enu3:Pas 2} -
+Confirmación almacenar correo electrónico}
+\end{figure}
+
+
+\item \label{enu3:Pas 3}Finalmente el correo electrónico será almacenado
+en la carpeta que hayamos especificado (ver figura \ref{fig:Enviados}).
+
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[clip,scale=0.45]{screenshots_user_es/Step3-3}
+\par\end{centering}
+
+\caption{\label{fig:Enviados}Paso \ref{enu3:Pas 3} - Carpeta correos enviados
+desde el\emph{ }zimlet}
+\end{figure}
+\end{enumerate}
+
+\end{document}
