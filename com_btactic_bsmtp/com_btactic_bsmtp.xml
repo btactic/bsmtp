@@ -1,0 +1,21 @@
+<zimlet name="com_btactic_bsmtp" version="1.0" description="BSMTP Integration.">
+    
+    <include>com_btactic_bsmtp.js</include>
+    <includeCSS>com_btactic_bsmtp.css</includeCSS>
+    <handlerObject>com_btactic_bsmtp_HandlerObject</handlerObject>
+
+    <zimletPanelItem label="bSmtp" icon="iconbsmtp-panelIcon">
+    <toolTipText>${msg.bSmtp_click_to_setting_smtp}</toolTipText>
+    </zimletPanelItem>
+
+    <userProperties>
+        <property type="number" label="${msg.bSmtp_folder_id}" name="folder_id" />
+        <property type="string" label="${msg.bSmtp_host}" name="host" />
+        <property type="number" label="${msg.bSmtp_port}" name="port" />
+        <property type="string" label="${msg.bSmtp_user}" name="user" />
+        <property type="password" label="${msg.bSmtp_password}" name="password"/>
+        <property type="string" label="${msg.bSmtp_folder_path}" name="folder_path"/>
+        <property type="string" label="${msg.bSmtp_encrypt_options}" name="encrypt_options"/>
+    </userProperties>
+
+</zimlet>
