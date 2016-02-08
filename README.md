@@ -6,39 +6,24 @@ This project aims for integration of sent mails using diferents SMTP server.
 
 
 ## Installing bSmtp
- - Create a folder named com_btactic_bsmtp
- - Download bSmtp source and uncompress into previously created folder
- - Zip the folder com_btactic_bsmtp and deploy using Zimbra Administration interface
- 
-You can also deploy the zimlet from the server shell 
+The recommended method is to deploy using git.
 
-    $ su - zimbra
-    $ zmzimletctl deploy com_btactic_bsmtp.zip
-    $ zmmailboxdctl restart
-  
+```
+# apt-get -y install git
+# git clone https://github.com/btactic/bsmtp.git
+# cd owncloud-zimlet
+# chmod +rx build.sh
+# ./build.sh
+# chmod +rx generate_doc.sh
+# ./generate_doc.sh
+```
+Once we compiled documentation. Follow the steps in the administrator manual to install the zimlet.
+
 ## Configuring bSmtp
  There is no global configuration for bSmtp, each user must 
  configure it separately.
 
- If bSmtp has been correctly deployed, after loggin in zimbra, 
- a new icon should apperar in the left panel. Just click it and 
- a configuration window should appear with the following fields:
-
- Folder path: the path where the sent email will stored
- Smtp Host: the host of server smtp 
- Smtp Port: the port wich is used to send the email
- User Account: the email address of the user
- Password: password of this account
- Encryption mode: the type of encryption to apply into the email
-
-## Using bSmtp
- There are three ways to access zSugar screen:
-
- - Configuration menu:
- 	Click on the zimlet and a configuration menu will appear, then fill all the fields
- - Using Toolbar Button:
- 	Select or create a email and click 'Enviar SMTP' to send the email.
-
+Settings for each user, follow the steps described in the user manual.
 
 ## License
 
