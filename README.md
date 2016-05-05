@@ -28,6 +28,7 @@ Settings for each user, follow the steps described in the user manual.
 ## License
 
 Copyright (C) <2016>  BTACTIC, SCCL
+
 Copyright (C) <2015>  Aleix Ribes Grimaldos & Quan En Pan
 
 This program is free software: you can redistribute it and/or modify
