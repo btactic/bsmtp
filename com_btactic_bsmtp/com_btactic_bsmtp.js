@@ -144,7 +144,7 @@ com_btactic_bsmtp_HandlerObject.prototype._setPort = function() {
 com_btactic_bsmtp_HandlerObject.prototype._saveUserInfo = function() {
 
 	if(this.fid !== undefined)
-    	{this.setUserProperty("folder_id", this.fid);alert("here");}
+	{this.setUserProperty("folder_id", this.fid);}
     this.setUserProperty("folder_path", this.inputFieldFolder.getValue());
     this.setUserProperty("host", this.inputFieldSmtpHost.getValue());
     this.setUserProperty("user", this.inputFieldSmtpAccount.getValue());
