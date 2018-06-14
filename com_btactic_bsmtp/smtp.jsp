@@ -91,8 +91,8 @@ Author     : q
         msg.setText(body, "UTF-8");
         msg.setSentDate(new Date());
         msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
-        msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(ccEmail));
-        msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(bccEmail));
+        msg.addRecipients(Message.RecipientType.CC, InternetAddress.parse(ccEmail));
+        msg.addRecipients(Message.RecipientType.BCC, InternetAddress.parse(bccEmail));
         Transport.send(msg);  
     }catch (Exception e) {
         response.sendError(500);

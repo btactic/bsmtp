@@ -1,4 +1,4 @@
-<zimlet name="com_btactic_bsmtp" version="1.01" description="BSMTP Integration.">
+<zimlet name="com_btactic_bsmtp" version="1.02" description="BSMTP Integration.">
     
     <include>com_btactic_bsmtp.js</include>
     <includeCSS>com_btactic_bsmtp.css</includeCSS>
